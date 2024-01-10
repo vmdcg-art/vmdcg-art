@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap'); /*importar la fuente LEAGUE SPARTAN*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face{
+    font-family: 'Titillium Web';
+    src:url('../fonts/TitilliumWeb-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Titillium Web';
+    src:url('../fonts/TitilliumWeb-SemiBold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Titillium Web';
+    src:url('../fonts/TitilliumWeb-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.05em;;
+}
+body{
+    width: 100%;
+    background-color: #FFEBCC;
+}
+nav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 3em;
+    background-color: #4D243D;
+}
+
+nav > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > ul > li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav > ul > li > a {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 400;
+    
+    font-size: 1.25em;
+    text-decoration: none;
+    color: white;
+}
+nav > ul > li > a:hover {
+    font-weight: bold;
+    color: #FFD700;
+}
+h1{
+    font-size: 3.5em;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 900;
+}
+h2{
+    font-size: 3.5em;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 900;
+    
+    font-size: 2.5em;
+    text-align: center;
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+}
+h3 {
+    text-align: center;
+}
+/*--------------------------------------------------------*/
+#presentacion {
+    width: 100%;
+    padding-top: 6em;
+    padding-left: 20em;
+    padding-right: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#presentacion > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#presentacion > #descarga {
+    width: 100%;
+    margin-top: 3em;
+    justify-content: space-around;
+}
+#presentacion > #descarga > a {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    
+    display: block;
+    text-align: center;
+    padding: 0.75em;
+    background-color: #D1A86A;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: #06080F;
+    transition: all 250ms;
+}
+#presentacion > #descarga > a:hover{
+    font-weight: bold;
+    transform: translateY(-2px);
+     box-shadow: rgba(0, 0, 0, 0.2) 0 4px 12px;
+}
+@keyframes grow {
+  from {
+    transform: scale(1, 1);
+  }
+  
+  to {
+    transform: scale(1.1, 1.1);
+  }
+}
+#presentacion > div > div {
+    padding-left: 2em;
+}
+#presentacion > div > div > p{
+    font-size: 1.3em;
+}
+hr {
+    width: 50%;
+    border: none;
+    border-top: 3px solid;
+    border-color: black;
+    margin-top: 80px;
+}
+/*--------------------------------------------------------*/
+#software {
+    width: 100%;
+    padding-left: 15em;
+    padding-right: 15em;
+    border: 0.1px solid;
+    border-color: #FFE2CC;
+    background-color: #FFE2CC;
+}
+#software > div {
+    display: flex;
+    justify-content: center;
+}
+#software > .lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+#software > .lista > .programa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em;
+}
+#software > .lista > .programa > figure > img{
+    max-width: 128px;
+    max-height: 128px;
+}
+h3{
+    padding-top: 1em;
+}
+
+/*--------------------------------------------------------*/
+footer > div {
+    width: 100%;
+    height: 5vh;
+    background-color: #4D243D;
+}
+footer > div > p {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: bold;
+    
+    height: 100%;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*--------------------------------------------------------*/
+
+@media screen and (max-width: 1200px){
+    *{
+        font-size: 1em;
+    }
+    nav > ul > li > a {
+        font-size: 1em;
+    }
+    #presentacion{
+        padding: 0;
+        padding-top: 4em;
+    }
+    #presentacion > div {
+        margin: 0;
+        padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    #presentacion > div > div {
+        padding: 0;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 2em;
+    }
+    #presentacion > div > div > p {
+        text-align: center;
+    }
+    #presentacion > div > figure > img {
+        width: 20em;
+    }
+    #presentacion > #descarga {
+        display: flex;
+        height: 10em;
+        padding: 0;
+        align-content: space-around;
+    }
+    hr {
+        margin-top: 3em;
+    }
+    #software {
+        padding: 0;
+    }
+}

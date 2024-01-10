@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=League+Spartan&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap'); /*importar la fuente LEAGUE SPARTAN*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face{
+    font-family: 'Titillium Web';
+    src:url('../fonts/TitilliumWeb-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Titillium Web';
+    src:url('../fonts/TitilliumWeb-SemiBold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Titillium Web';
+    src:url('../fonts/TitilliumWeb-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.05em;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    background-color: #FFEBCC;
+}
+nav {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 3em;
+    background-color: #4D243D;
+}
+
+nav > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > ul > li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav > ul > li > a {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 400;
+    
+    font-size: 1.25em;
+    text-decoration: none;
+    color: white;
+}
+nav > ul > li > a:hover {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/*--------------------------------------------------------*/
+
+#introPortfolio {
+    width: 100%;
+    height: 35vh;
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*como está en columna, lo alinea al centro horizontal*/
+    justify-content: center; /*lo alinea verticalemente al centro*/
+    justify-content: space-between;
+}
+#introPortfolio > #text{
+    text-align: center;
+}
+h1{
+    font-size: 3.5em;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 900;
+}
+.submenu {
+    width: 30%;
+}
+.submenu  > #apartados {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.submenu  > #apartados > a {
+    text-decoration: none;
+    color: black;
+}
+.submenu  > #apartados > a:hover {
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid;
+    border-color: black;
+}
+
+#darker1, #darker2 {
+    border: 0.1px solid;
+    border-color: #FFE2CC;
+    background-color: #FFE2CC;
+}
+
+h2{
+    font-size: 3.5em;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 900;
+    
+    font-size: 2.5em;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/*--------------------------------------------------------*/
+
+.galeria {
+    width: 100%;
+    max-width: 80%;
+    margin: 1em auto;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria > figure {
+    position: relative;
+    max-width: 500px;
+    max-height: 281px;
+    overflow: hidden;
+    padding: 10px;
+    padding-bottom: 4em;
+}
+
+.galeria > figure > img {
+    width: 100%;
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
+
+.galeria > figure > img:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.galeria > figure > figcaption {
+    display: none;
+}
+
+#modal { /*DIV DE LA AMPLIACION DE LA GALERIA*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+#modal > figure {
+    width: 80%;
+    max-width: 1080px;
+    max-height: 80%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+#modal > figure > figcaption {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2em;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+#cerrar:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------*/
+
+.proyectos {
+    margin-left: 15em;
+    margin-right: 15em;
+    padding: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+.proyectos > figure > img {
+    max-width: 600px;
+    max-height: 380px;
+}
+
+.proyectos > div {
+    padding-left: 1.5em;
+}
+
+.proyectos > div > h4 {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+
+.proyectos > div > h5 {
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+
+.proyectos > div > p {
+    padding-bottom: 2.5em;
+}
+
+.proyectos > div > a{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8em;
+    
+    display: block;
+    text-align: center;
+    width: 46%;
+    padding: 0.5em;
+    background-color: #D1A86A;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: #06080F;
+    transition: all 250ms;
+}
+
+.proyectos > div > a:hover{
+    font-weight: bold;
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 12px;
+}
+
+@keyframes grow_color {
+  from {
+    transform: scale(1, 1);
+    background-color: #DF7853;
+  }
+    
+  to {
+    transform: scale(1.05, 1.05);
+    background-color: #db673d;
+  }
+}
+
+/*--------------------------------------------------------*/
+
+footer > div {
+    width: 100%;
+    height: 5vh;
+    background-color: #4D243D;
+}
+footer > div > p {
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: bold;
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*--------------------------------------------------------*/
+
+@media screen and (max-width: 1200px){
+    *{
+        font-size: 1em;
+    }
+    nav {
+        width: 100%;
+    }
+    nav > ul > li > a {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    #introPortfolio {
+        padding-top: 4em;
+    }
+    #introPortfolio > #text {
+        margin: 0;
+        width: 80%;
+    }
+    .submenu {
+        width: 80%;
+    }
+    .galeria > figure {
+        padding-bottom: 0;
+    }
+    #modal {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+    }
+    #modal > figure {
+        margin: 0;
+    }
+    .proyectos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    .proyectos > div {
+        padding: 0;
+        padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .proyectos > div > p, h4, h5 {
+        text-align: center;
+    }
+    .proyectos > figure > img {
+        width: 100%;
+    }
+    .proyectos > figure {
+        display: flex;
+        justify-content: center;
+    }
+}
